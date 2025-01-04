@@ -1,0 +1,75 @@
+plugins {
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'nemosofts.online.live'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.mz.telegramlive"
+        minSdk 23
+        targetSdk 35
+        versionCode 10
+        versionName "10.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'BASE_URL', BASE_URL
+        it.buildConfigField 'String', 'API_NAME', API_NAME
+        it.buildConfigField 'String', 'ENC_KEY', ENC_KEY
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    lint {
+        disable 'OldTargetApi', 'GradleDependency', 'GradleDynamicVersion'
+    }
+}
+
+dependencies {
+    implementation libs.bundles.nemosofts
+    implementation libs.bundles.network.security
+    implementation libs.bundles.google
+    implementation(platform(libs.firebase.bom))
+    implementation libs.oneSignal
+    implementation libs.scytale
+    implementation libs.pageindicatorview
+    implementation libs.eventbus
+    implementation libs.bundles.advertising
+    implementation(libs.wortise) {
+        exclude group: 'com.google.ads.mediation', module: 'mintegral'
+    }
+    implementation libs.billingclient
+    implementation libs.bundles.media3
+    implementation libs.play.cast.framework
+    implementation(libs.bundles.exoplayer) {
+        exclude group: "androidx.media3", module: "media3-exoplayer"
+    }
+    implementation libs.lifecycle.process
+    implementation libs.lifecycle.runtime
+    annotationProcessor libs.lifecycle.compiler
+    implementation fileTree(dir: "libs", include: ["lib-*.aar"])
+
+    implementation platform('com.google.firebase:firebase-bom:33.7.0')
+    implementation 'com.google.firebase:firebase-analytics'
+}

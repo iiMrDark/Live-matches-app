@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?ns_bg"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp">
+
+    <LinearLayout
+        android:id="@+id/ll_event_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/bg_event"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_event_top">
+
+            <TextView
+                android:id="@+id/tv_event_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_toStartOf="@+id/tv_event_date"
+                android:background="@drawable/bg_event"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="10:00"
+                android:textColor="?ns_title"
+                android:textSize="@dimen/_10ssp"
+                android:translationY="10dp" />
+
+            <TextView
+                android:id="@+id/tv_event_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/_7sdp"
+                android:text="@string/app_name"
+                android:textColor="?ns_title"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_event_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/bg_event"
+                android:paddingStart="@dimen/_6sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="20/10/2023"
+                android:textColor="?ns_title"
+                android:textSize="@dimen/_10ssp"
+                android:translationY="10dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_team_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_toStartOf="@+id/iv_team_one"
+                    android:text="@string/app_name"
+                    android:textAlignment="viewEnd"
+                    android:textColor="?ns_title"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold" />
+
+                <androidx.nemosofts.view.ImageHelperView
+                    android:id="@+id/iv_team_one"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/logo"
+                    app:hv_border_color="?ns_border"
+                    app:hv_border_width="@dimen/_3sdp"
+                    app:hv_mutate_background="false"
+                    app:hv_oval="true" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/bg_card"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="VS"
+                    android:textColor="?ns_title"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <androidx.nemosofts.view.ImageHelperView
+                    android:id="@+id/iv_team_two"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/logo"
+                    app:hv_border_color="?ns_border"
+                    app:hv_border_width="@dimen/_3sdp"
+                    app:hv_mutate_background="false"
+                    app:hv_oval="true" />
+
+                <TextView
+                    android:id="@+id/tv_team_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/iv_team_two"
+                    android:text="@string/app_name"
+                    android:textAlignment="viewStart"
+                    android:textColor="?ns_title"
+                    android:textSize="@dimen/_10ssp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/categB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_event"
+                    android:layoutDirection="rtl"
+                    android:padding="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="0dp"
+                        android:tint="?ns_title"
+                        app:srcCompat="@drawable/cup_star_svgrepo_com" />
+
+                    <TextView
+                        android:id="@+id/category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="25dp"
+                        android:text="الدوري الانجليزي"
+                        android:textColor="?ns_title" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:layoutDirection="rtl"
+                    android:padding="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="0dp"
+                        android:tint="?ns_title"
+                        app:srcCompat="@drawable/icons8_live" />
+
+                    <TextView
+                        android:id="@+id/tv_event_checklive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="25dp"
+                        android:text="لم يتم البث بعد"
+                        android:textColor="?ns_title" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:layoutDirection="rtl"
+                    android:padding="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="0dp"
+                        app:srcCompat="@drawable/baseline_mic_24" />
+
+                    <TextView
+                        android:id="@+id/commentator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="22dp"
+                        android:text="ميدحت شلبي"
+                        android:textColor="?ns_title" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:layoutDirection="rtl"
+                    android:padding="5dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="0dp"
+                        android:tint="?ns_title"
+                        app:srcCompat="@drawable/tv_svgrepo_com" />
+
+                    <TextView
+                        android:id="@+id/channel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="25dp"
+                        android:text="بي إن سبورت"
+                        android:textColor="?ns_title" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_native_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="?ns_bg"
+        android:visibility="gone" />
+
+</LinearLayout>

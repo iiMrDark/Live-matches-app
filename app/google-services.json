@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "544298775598",
+    "project_id": "telegram-live-eafcc",
+    "storage_bucket": "telegram-live-eafcc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544298775598:android:43dd8dcdef8b8ccf8edbbf",
+        "android_client_info": {
+          "package_name": "com.mz.telegramlive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544298775598-a9hsn1gndbeiv3rp3gbvi0b53idhempq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASG1a75ARrgucQhQa2MkvfGJKZi1Xts94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544298775598-6mpmmpv3eav03pea3clhkqtm24q9v9g4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
